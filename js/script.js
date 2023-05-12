@@ -1,28 +1,9 @@
-/* Задания на урок:
+import { movies } from "./db.js"
 
-1) Удалить все рекламные блоки со страницы (правая часть сайта)
-
-2) Изменить жанр фильма, поменять "комедия" на "драма"
-
-3) Изменить задний фон постера с фильмом на изображение "bg.jpg". Оно лежит в папке img.
-Реализовать только при помощи JS
-
-4) Список фильмов на странице сформировать на основании данных из этого JS файла.
-Отсортировать их по алфавиту 
-
-5) Добавить нумерацию выведенных фильмов */
-
-'use strict';
-
-const movieDB = {
-    movies: [
-        "Логан",
-        "Лига справедливости",
-        "Ла-ла лэнд",
-        "Одержимость",
-        "Скотт Пилигрим против..."
-    ]
-};
+let title = document.querySelector(".promo__title")
+let descr = document.querySelector(".promo__descr")
+let rateIMDB = document.querySelector(".promo__ratings").firstElementChild
+let language = document.querySelector(".promo__ratings").lastElementChild
 
 // 1
 
@@ -55,17 +36,62 @@ drama.innerText = 'Драмма'
 // 3
 
 let bg = document.querySelector('.promo__bg')
-bg.style.background = 'url("./img/bg.jpg")'
 
-bg.style.height = '360px'
-bg.style.backgroundPosition = 'top'
-bg.style.padding = '107px 0 0 61px'
 
-// deleteEL
+let promo__interactive_list = document.querySelector(".promo__interactive-list")
 
-let dlt = document.querySelectorAll('.delete')
-dlt.forEach(el => {
-    el.onclick = () => {
-        el.parentElement.remove()
+
+reload(movies, promo__interactive_list)
+
+function reload(arr, place) {
+
+    for (let item of arr) {
+        let promo__interactive_item = document.createElement("li")
+        let delet = document.createElement("div")
+
+        promo__interactive_item.classList.add("promo__interactive-item")
+        delet.classList.add("delete")
+
+        promo__interactive_item.innerHTML = (arr.indexOf(item) + 1) + '. ' + item.Title
+        promo__interactive_item.style.cursor = 'pointer'
+
+        promo__interactive_item.append(delet)
+        place.append(promo__interactive_item)
+
+        drama.innerText = 'name'
+        bg.style.background = `url("../img/mars.webp")`
+        bg.style.backgroundRepeat = `no-repeat`
+        bg.style.backgroundSize = `1000% 1000%`
+        title.innerHTML = "title"
+        descr.innerHTML = 'description'
+        rateIMDB.innerHTML = "IMDb: 0"
+        language.innerHTML = "Language: "
+
+        promo__interactive_item.onclick = () => {
+            if (arr.includes(item)) {
+                drama.innerText = item.Genre
+                bg.style.background = `url(${item.Poster})`
+                bg.style.backgroundRepeat = `no-repeat`
+                bg.style.backgroundSize = `cover`
+                title.innerHTML = item.Title
+                descr.innerHTML = item.Plot
+                rateIMDB.innerHTML = "IMDb: " + item.imdbRating
+                language.innerHTML = "Language: " + item.Language
+            }
+            else {
+                drama.innerText = 'name'
+                bg.style.background = `url("../img/mars.webp")`
+                title.innerHTML = "title"
+                descr.innerHTML = 'description'
+                rateIMDB.innerHTML = "IMDb: 0"
+                language.innerHTML = "Language: "
+            }
+        }
+
+        delet.onclick = () => {
+            arr = arr.filter(el => el.ID !== item.ID)
+            delet.parentElement.remove()
+            console.log(arr);
+        }
     }
-})
+}
