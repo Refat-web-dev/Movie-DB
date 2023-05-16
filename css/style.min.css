@@ -2,219 +2,437 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+}
 
 .header {
   display: flex;
-  height: 100px; }
-  .header__search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 300px;
-    background: #FFD500; }
-    .header__search form {
-      position: relative;
-      width: 260px;
-      height: 30px; }
-      .header__search form input {
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid #fff;
-        background-color: transparent;
-        color: #fff;
-        font-size: 24px;
-        line-height: 28px;
-        padding-bottom: 5px;
-        outline: none; }
-        .header__search form input::placeholder {
-          color: #fff; }
-      .header__search form:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 2px;
-        right: 10px;
-        background: url("../icons/search.svg") center center/cover no-repeat;
-        width: 24px;
-        height: 24px; }
-  .header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: calc(100% - 360px); }
+  height: 100px;
+}
+
+.header__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 300px;
+  background: #FFD500;
+}
+
+.header__search form {
+  position: relative;
+  width: 260px;
+  height: 30px;
+}
+
+.header__search form input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 5px;
+  outline: none;
+}
+
+.header__search form input::placeholder {
+  color: #fff;
+}
+
+.header__search form .after {
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  background: url("../icons/search.svg") center center/cover no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: calc(100% - 360px);
+}
 
 .promo {
   height: 780px;
-  display: flex; }
-  .promo__menu {
-    width: 300px;
-    height: 100%;
-    background: #212121;
-    padding: 60px 0 0 10px; }
-    .promo__menu-item {
-      display: block;
-      font-size: 28px;
-      line-height: 33px;
-      color: #D6D9DC;
-      text-decoration: none;
-      font-weight: 300;
-      padding-left: 40px;
-      margin-top: 18px; }
-      .promo__menu-item:hover {
-        color: #FFD500; }
-      .promo__menu-item_active {
-        border-left: 2px solid #FFD500;
-        color: #FFD500; }
-  .promo__content {
-    width: calc(100% - 600px); }
-  .promo__bg {
-    height: 360px;
-    background-position: top;
-    padding: 107px 0 0 61px;
-    transition: .3s linear; }
-  .promo__genre {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    color: #FFFFFF;
-    text-transform: uppercase; }
-  .promo__title {
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 56px;
-    color: #FFFFFF;
-    text-transform: uppercase; }
-  .promo__descr {
-    width: 481px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    color: #FFFFFF;
-    text-transform: uppercase; }
-  .promo__ratings {
-    margin-top: 13px; }
-    .promo__ratings span {
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 21px;
-      color: #FFD500;
-      margin-right: 25px; }
-  .promo__interactive {
-    display: flex; }
-    .promo__interactive > div {
-      width: 50%;
-      padding: 30px 0 0 60px; }
-    .promo__interactive-title {
-      display: inline-block;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 28px;
-      color: #000000; }
-      .promo__interactive-title:after {
-        content: '';
-        display: block;
-        width: 33%;
-        height: 2px;
-        background-color: #000; }
-    .promo__interactive-list {
-      list-style-type: none;
-      margin-top: 35px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; }
-    .promo__interactive-item {
-      display: inline-block;
-      position: relative;
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 18px;
-      color: #000000;
-      margin-bottom: 15px;
-      padding-right: 40px;
-      text-transform: uppercase; }
-      .promo__interactive-item span {
-        display: block;
-        position: absolute;
-        left: -30px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        background: url("../icons/Star.svg") center center/cover no-repeat; }
-      .promo__interactive-item:before {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        display: block;
-        width: calc(100% - 40px);
-        height: 2px;
-        background-color: #FFD500; }
-      .promo__interactive-item:hover .delete {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        background: url("../icons/trash.png") center center/cover no-repeat;
-        cursor: pointer; }
-    .promo__interactive .add .promo__interactive-title {
-      margin-bottom: 25px; }
-    .promo__interactive .add span {
-      display: block;
-      margin: 10px 0;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 16px;
-      color: #000000; }
-    .promo__interactive .add .yes {
-      display: inline;
-      margin-left: 10px; }
-    .promo__interactive .add input[type="text"] {
-      width: 270px;
-      height: 45px;
-      line-height: 50px;
-      font-size: 16px;
-      background: rgba(196, 196, 196, 0.29);
-      border: 1px solid rgba(0, 0, 0, 0.19);
-      padding: 0 15px;
-      outline: none;
-      border-radius: 4px; }
-      .promo__interactive .add input[type="text"]::placeholder {
-        font-weight: 300;
-        font-size: 16px;
-        color: rgba(0, 0, 0, 0.53); }
-    .promo__interactive .add button {
-      display: block;
-      margin-top: 15px;
-      width: 170px;
-      height: 45px;
-      background: #FFD500;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 14px;
-      color: #FFFFFF;
-      border: none;
-      outline: none;
-      cursor: pointer; }
-      .promo__interactive .add button:active {
-        transform: scale(0.95); }
-  .promo__adv {
-    background: #212121;
-    width: 300px;
-    height: 100%; }
-    .promo__adv-title {
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 21px;
-      color: #FFD500;
-      margin: 20px 0;
-      text-align: center; }
-    .promo__adv img {
-      width: 100%;
-      margin-bottom: 10px; }
+  display: flex;
+}
+
+.promo__menu {
+  width: 300px;
+  height: 100%;
+  background: #212121;
+  padding: 60px 0 0 10px;
+}
+
+.promo__menu-item {
+  display: block;
+  font-size: 28px;
+  line-height: 33px;
+  color: #D6D9DC;
+  text-decoration: none;
+  font-weight: 300;
+  padding-left: 40px;
+  margin-top: 18px;
+}
+
+.promo__menu-item:hover {
+  color: #FFD500;
+}
+
+.promo__menu-item_active {
+  border-left: 2px solid #FFD500;
+  color: #FFD500;
+}
+
+.promo__content {
+  width: calc(100% - 600px);
+}
+
+.promo__bg {
+  height: 360px;
+  background-position: top;
+  padding: 107px 0 0 61px;
+  transition: .3s linear;
+}
+
+.promo__genre {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.promo__title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.promo__descr {
+  width: 481px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.promo__ratings {
+  margin-top: 13px;
+}
+
+.promo__ratings span {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFD500;
+  margin-right: 25px;
+}
+
+.promo__interactive {
+  display: flex;
+}
+
+.promo__interactive>div {
+  width: 50%;
+  padding: 30px 0 0 60px;
+}
+
+.promo__interactive-title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.promo__interactive-title:after {
+  content: '';
+  display: block;
+  width: 33%;
+  height: 2px;
+  background-color: #000;
+}
+
+.promo__interactive-list {
+  list-style-type: none;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.promo__interactive-item {
+  display: inline-block;
+  position: relative;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 15px;
+  padding-right: 40px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.promo__interactive-item span {
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("../icons/Star.svg") center center/cover no-repeat;
+}
+
+.promo__interactive-item:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  display: block;
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: #FFD500;
+}
+
+.promo__interactive-item:hover .delete {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("../icons/trash.png") center center/cover no-repeat;
+  cursor: pointer;
+}
+
+.promo__interactive .add .promo__interactive-title {
+  margin-bottom: 25px;
+}
+
+.promo__interactive .add span {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.promo__interactive .add .yes {
+  display: inline;
+  margin-left: 10px;
+}
+
+.promo__interactive .add input[type="text"] {
+  width: 270px;
+  height: 45px;
+  line-height: 50px;
+  font-size: 16px;
+  background: rgba(196, 196, 196, 0.29);
+  border: 1px solid rgba(0, 0, 0, 0.19);
+  padding: 0 15px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.promo__interactive .add input[type="text"]::placeholder {
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.53);
+}
+
+.promo__interactive .add button {
+  display: block;
+  margin-top: 15px;
+  width: 170px;
+  height: 45px;
+  background: #FFD500;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.promo__interactive .add button:active {
+  transform: scale(0.95);
+}
+
+.promo__adv {
+  background: #212121;
+  width: 300px;
+  height: 100%;
+}
+
+.promo__adv-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFD500;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.promo__adv img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.passive::before {
+  display: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.movie_about {
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  min-width: 700px;
+  max-height: 500px;
+  overflow-y: scroll;
+  background: #FFF;
+  border-radius: 10px;
+  opacity: 0;
+  scale: 0;
+  z-index: 2;
+  transition: .3s ease-in-out;
+}
+
+.movie_about span {
+  font-size: 14px;
+}
+
+.movie_about P {
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.movie_bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #00000080;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  z-index: 1;
+  transition: .3s linear;
+}
+
+.left_item {
+  width: 40%;
+}
+
+.left_item img {
+  width: 100%;
+
+}
+
+.right_item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movie_rates {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.tomatos {
+  background-image: url(https://www.rottentomatoes.com/assets/pizza-pie/images/icons/tomatometer/tomatometer-rotten.f1ef4f02ce3.svg);
+  background-repeat: no-repeat;
+  background-position: 0 32px;
+  background-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.range {
+  margin-left: 25px;
+  background: green;
+  height: 30px;
+}
+
+.range_fill {
+  background-color: greenyellow;
+  width: 20%;
+  height: 100%;
+}
+
+.star_rating {}
+
+.starRatingContainer {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars {
+  width: 25px;
+  height: 25px;
+  background: #FFF;
+  background-image: url("../icons/idb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: #000;
+  border-radius: 10px;
+  color: #D6D9DC;
+  text-align: center;
+}
+
+.show_all {
+  margin: 50px 20px 0 0;
+  font-size: 50px;
+  text-align: center;
+  color: #FFF;
+  cursor: pointer;
+
+}

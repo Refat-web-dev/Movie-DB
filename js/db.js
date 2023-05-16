@@ -381,7 +381,7 @@ let movies = [
         },
         {
             "Source": "Rotten Tomatoes",
-            "Value": "82%"
+            "Value": "52%"
         },
         {   
             "Source": "Metacritic",
