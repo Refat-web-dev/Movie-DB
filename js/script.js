@@ -158,7 +158,7 @@ function reload(arr, place) {
             let fill_stars = +Math.round(item.imdbRating)
 
             for (let index = 0; index < fill_stars; index++) {
-                starRatingContainer.children[index].style.backgroundImage = "url(../icons/idb_fill.svg)"
+                starRatingContainer.children[index].style.backgroundImage = "url(https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-64.png)"
             }
 
             let close_btn = document.createElement("div")
