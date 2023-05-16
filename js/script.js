@@ -270,6 +270,16 @@ function reload(arr, place) {
 
                 } else {
                     setMovie(arr[0])
+                    movie_about.style.display = "none"
+                    setTimeout(() => {
+                        movie_about.style.scale = "0"
+                        movie_about.style.opacity = "0"
+                    }, 300);
+
+                    movie_bg.style.display = "none"
+                    setTimeout(() => {
+                        movie_bg.style.opacity = "0"
+                    }, 300);
                 }
                 let promo__interactive_items = promo__interactive_list.querySelectorAll("li")
                 promo__interactive_items.forEach(el => el.classList.add("passive"))
